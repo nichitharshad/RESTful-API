@@ -1,0 +1,5 @@
+{
+    "env": {
+        "NODE_HEADPUMP_OPTIONS": "nosignal nodemon app.js",
+   }
+}
