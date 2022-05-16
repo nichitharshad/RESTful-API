@@ -3,14 +3,14 @@ var express = require('express');
 var app = express();
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
-//var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 const productRoutes = require("./routes/products")
 const orderRoutes = require("./routes/orders");
 //const { default: mongoose } = require('mongoose');
 const res = require('express/lib/response');
 
-//mongoose.connect('mongodb+srv://harshad005:p9rtYNqDjrWGyvTz@test.ykwrv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://harshad005:p9rtYNqDjrWGyvTz@test.ykwrv.mongodb.net/test?retryWrites=true&w=majority')
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
